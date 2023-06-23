@@ -13,6 +13,23 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+There are some Python submodules in the folder **lib**. In order to install
+them, first we need to initialise the submodules, and then update them.
+
+```
+git submodule init
+git submodule update
+```
+
+(It is also possible to initiate and update all the submodules when clonning the
+repository by using the command `git clone --recurse-submodules`.)
+
+Install the hierarchical impurity library
+
+```
+pip install -e lib/himpurity/
+```
+
 # Jupyter notebooks
 
 After loading the virtual environment
