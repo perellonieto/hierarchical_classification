@@ -1,0 +1,3 @@
+[submodule "lib/himpurity"]
+	path = lib/himpurity
+	url = git@github.com:BenAranaS/himpurity.git
