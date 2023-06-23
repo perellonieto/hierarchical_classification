@@ -1,5 +1,8 @@
 # hierarchical-classification
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/perellonieto/hierarchical_classification/HEAD)
+
+You can run the Jupyter Notebooks online in Binder by clicking the **launch binder** button above.
 
 # Installation
 
