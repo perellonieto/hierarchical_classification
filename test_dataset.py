@@ -9,6 +9,12 @@ import numpy as np
 from sklearn.datasets import make_blobs
 import matplotlib.pyplot as plt
 
+from himpurity.tests.utils import make_digits_dataset
+
+
+X, y = make_digits_dataset(
+    targets=[1, 7, 3, 8, 9],
+    as_str=True, )
 
 random_state = 42
 
@@ -74,11 +80,13 @@ global_params = {"max_depth": 3, "random_state": random_state}
 clf = ClassifierCriterionBinder(DecisionTreeClassifier, MHICriterion,
                                 ch_hierarchy, clf_params=global_params)
 
+y_train = y_train.astype(str)
 clf.fit(X_train, y_train)
 
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 X_test, y_test = generator.sample(1000)
+y_test = y_test.astype(str)
 predictions = clf.predict(X_test)
 
 cm = confusion_matrix(y_test, predictions)
